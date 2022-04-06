@@ -1,5 +1,5 @@
 # Google Summer of Code - CHAOSS Microtasks
-This Readme file provides the status of the microtasks that were successfully completed.
+This Readme file provides the details of the microtasks that were successfully completed.
 
 ## Microtask 0:
 
