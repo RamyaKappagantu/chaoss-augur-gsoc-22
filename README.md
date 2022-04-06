@@ -30,7 +30,7 @@ Encountered an error **SSL: CERTIFICATE_VERIFY_FAILED** while installing require
 Resolution:
 
 I'm using Python 3.7 on Mac OSX and my mac doesn't have any local certificate to validate the SSL connections.
-I found a file **Install Certificates.command** in **/Applications/Python 3.7** folder and running this file in a terminal installed the **certifi** python package which helps in validating the SSL connections. After installing the package, it then created a symbolic link from the OpenSSL certificates file to the certificates file installed by certifi. Using this helped in resolving the SSL error and install the required workers.
+I found a file **Install Certificates.command** in **/Applications/Python 3.7** folder and running this file in a terminal installed the **certifi** python package which helps in validating the SSL connections. After installing the package, it then created a symbolic link from the OpenSSL certificates file to the certificates file installed by certifi. Using this helped in resolving the SSL error and successfully install the required workers.
 <img width="1433" alt="Microtask_2_error_msg" src="https://user-images.githubusercontent.com/42388485/161753610-a75f7895-5cd8-4e92-bd89-b7c78ccc2d80.png">
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
