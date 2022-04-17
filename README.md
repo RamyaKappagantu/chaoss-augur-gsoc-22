@@ -25,7 +25,7 @@ Identify new issues you encounter during installation.
 
 Status: 
 
-Encountered an error **SSL: CERTIFICATE_VERIFY_FAILED** while installing required NLTK word lists for machine learning workers.
+Error 1: Encountered an error **SSL: CERTIFICATE_VERIFY_FAILED** while installing required NLTK word lists for machine learning workers.
 
 Resolution:
 
@@ -37,4 +37,28 @@ I found a file **Install Certificates.command** in **/Applications/Python 3.7** 
 
 <img width="1412" alt="Microtask_2_resolution" src="https://user-images.githubusercontent.com/42388485/161753634-a19130fa-7bf2-4b42-bbe3-331d36dae894.png">
 
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Error 2: Encountered database error **No Augur API key found.** while setting up augur and installing the database schema.
+<img width="1361" alt="Microtask_2_db_error" src="https://user-images.githubusercontent.com/42388485/163698399-e685d095-4ee7-4a0d-9650-a0f8f668d31c.png">
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Resolution:
+
+After the error shows up, it found out an existing key in the database and prompted if the exisiting key needs to be replaced with the new one or not. Since, that was the first time I was setting up the schema, no previous key was generated. To find out if there's any existing api_key in the database, I connected to my created augur database and ran the query: **select * from "augur_operations"."augur_settings" where setting='augur_api_key';** and this query returned no rows. So, I went ahead and selected 'y' to replace the existing key and I encountered unique constraint error.
+Summarizing the issue, no augur api key was found in the database yet it prompted the user that an api key already exists in the database.
+Cleaning the build files and running make install helped in properly setting up the database schema.
+
+
+## Microtask 4:
+
+Anything you want to show us. Even if you find bugs in our documentation and want to issue a PR for those!
+
+Status:
+
+I found the links provided for pull_request_reports.py and contributor_reports.py and augur worker links as broken and raised a PR for the same:
+
+https://github.com/chaoss/community/pull/340
+
+https://github.com/chaoss/community/pull/342
