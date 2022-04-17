@@ -57,7 +57,7 @@ Anything you want to show us. Even if you find bugs in our documentation and wan
 
 Status:
 
-I found the links provided for pull_request_reports.py, contributor_reports.py and augur worker links as broken and raised a PR for the same:
+I found the links provided for pull_request_reports.py, contributor_reports.py and augur worker links as broken and raised PR's for the same:
 
 https://github.com/chaoss/community/pull/340
 
